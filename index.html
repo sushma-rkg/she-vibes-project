@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>She Vibes Expense Tracker</title>
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>She Vibes • AI Expense Tracker</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
 
@@ -27,40 +41,49 @@
       linear-gradient(
         to bottom,
         #f6f1eb,
-        #efe7df
+        #efe8df
       );
 
-      color: #43352d;
+      color: #352b25;
 
       min-height: 100vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 60px;
     }
 
     .container {
 
-      max-width: 1200px;
-      width: 100%;
+      max-width: 1180px;
 
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      margin: auto;
 
-      gap: 80px;
-      align-items: center;
+      padding:
+      80px 32px 60px;
     }
 
-    .left-section h1 {
+    .hero {
 
-      font-family: 'Playfair Display', serif;
+      display: grid;
 
-      font-size: 76px;
+      grid-template-columns:
+      1.1fr 0.9fr;
+
+      gap: 80px;
+
+      align-items: center;
+
+      min-height: 85vh;
+    }
+
+    h1 {
+
+      font-family:
+      'Playfair Display',
+      serif;
+
+      font-size: 74px;
+
       line-height: 1.05;
 
-      font-weight: 400;
+      font-weight: 500;
 
       letter-spacing: -2px;
 
@@ -69,22 +92,25 @@
       color: #2d221c;
     }
 
-    .left-section p {
+    .hero-text p {
 
       font-size: 18px;
+
       line-height: 1.9;
 
-      color: #6d5d53;
+      color: #67584f;
 
-      max-width: 560px;
+      margin-bottom: 34px;
 
-      margin-bottom: 38px;
+      max-width: 580px;
     }
 
     .button-group {
 
       display: flex;
-      gap: 18px;
+
+      gap: 16px;
+
       flex-wrap: wrap;
     }
 
@@ -92,102 +118,96 @@
 
       text-decoration: none;
 
-      padding: 15px 28px;
+      padding:
+      15px 28px;
 
       border-radius: 999px;
 
       font-size: 15px;
+
       font-weight: 500;
 
-      transition: all 0.25s ease;
+      transition: 0.25s ease;
     }
 
     .primary-btn {
 
       background: #2f241e;
+
       color: #f8f4ef;
     }
 
     .primary-btn:hover {
 
-      transform: translateY(-2px);
+      transform:
+      translateY(-2px);
 
       background: #1f1713;
     }
 
     .secondary-btn {
 
-      border: 1px solid #cdbfb1;
+      border:
+      1px solid #cfc1b4;
 
-      color: #4d3d34;
+      background:
+      rgba(255,255,255,0.45);
 
-      background: rgba(255,255,255,0.5);
+      color: #4f4137;
     }
 
     .secondary-btn:hover {
 
-      background: rgba(255,255,255,0.9);
+      background:
+      rgba(255,255,255,0.85);
     }
 
-    .dashboard-card {
+    .card {
 
-      background: rgba(255,255,255,0.5);
+      background:
+      rgba(255,255,255,0.52);
 
-      border: 1px solid rgba(255,255,255,0.7);
-
-      backdrop-filter: blur(14px);
+      border:
+      1px solid rgba(255,255,255,0.7);
 
       border-radius: 34px;
 
-      padding: 34px;
+      padding: 36px;
+
+      backdrop-filter: blur(12px);
 
       box-shadow:
-      0 20px 60px rgba(67,53,45,0.08);
+      0 20px 60px rgba(60,45,35,0.08);
     }
 
-    .dashboard-header {
+    .card h3 {
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      margin-bottom: 30px;
-    }
-
-    .dashboard-header h3 {
-
-      font-family: 'Playfair Display', serif;
+      font-family:
+      'Playfair Display',
+      serif;
 
       font-size: 30px;
+
+      font-weight: 500;
+
+      margin-bottom: 28px;
 
       color: #2d221c;
     }
 
-    .badge {
+    .stat {
 
-      background: #e8ddd1;
+      background:
+      rgba(255,255,255,0.65);
 
-      color: #5f4d42;
-
-      padding: 8px 14px;
-
-      border-radius: 999px;
-
-      font-size: 13px;
-      font-weight: 600;
-    }
-
-    .stat-card {
-
-      background: rgba(255,255,255,0.65);
+      border:
+      1px solid rgba(224,214,204,0.9);
 
       border-radius: 24px;
 
       padding: 22px;
 
       margin-bottom: 18px;
-
-      border: 1px solid rgba(221,210,199,0.8);
     }
 
     .stat-label {
@@ -198,7 +218,7 @@
 
       letter-spacing: 1px;
 
-      color: #8c7b70;
+      color: #897a70;
 
       margin-bottom: 10px;
     }
@@ -216,144 +236,445 @@
 
       margin-top: 28px;
 
-      padding: 22px;
+      background: #f2ebe4;
 
-      border-radius: 22px;
+      border-radius: 24px;
 
-      background: #f2ebe3;
+      padding: 24px;
 
-      color: #5b4b40;
+      color: #5d4e43;
 
-      line-height: 1.8;
+      line-height: 1.9;
 
       font-size: 15px;
     }
 
-    footer {
+    .section {
 
-      position: absolute;
-      bottom: 24px;
-
-      font-size: 13px;
-
-      color: #8f8177;
+      margin-top: 140px;
     }
 
-    @media(max-width: 960px) {
+    .section h2 {
 
-      body {
-        padding: 40px 24px;
-      }
+      font-family:
+      'Playfair Display',
+      serif;
 
-      .container {
+      font-size: 54px;
+
+      font-weight: 500;
+
+      margin-bottom: 28px;
+
+      color: #2d221c;
+    }
+
+    .section p {
+
+      max-width: 760px;
+
+      font-size: 18px;
+
+      line-height: 1.95;
+
+      color: #65564d;
+    }
+
+    .workflow {
+
+      display: grid;
+
+      grid-template-columns:
+      repeat(4, 1fr);
+
+      gap: 22px;
+
+      margin-top: 48px;
+    }
+
+    .workflow-card {
+
+      background:
+      rgba(255,255,255,0.5);
+
+      border:
+      1px solid rgba(223,212,201,0.9);
+
+      padding: 28px;
+
+      border-radius: 28px;
+
+      text-align: center;
+    }
+
+    .workflow-card h4 {
+
+      font-size: 18px;
+
+      margin-bottom: 12px;
+
+      color: #342923;
+    }
+
+    .workflow-card p {
+
+      font-size: 15px;
+
+      line-height: 1.8;
+
+      color: #74655b;
+    }
+
+    .signup-box {
+
+      margin-top: 60px;
+
+      background:
+      rgba(255,255,255,0.55);
+
+      border-radius: 34px;
+
+      padding: 42px;
+
+      border:
+      1px solid rgba(223,212,201,0.9);
+    }
+
+    .signup-box h3 {
+
+      font-family:
+      'Playfair Display',
+      serif;
+
+      font-size: 38px;
+
+      font-weight: 500;
+
+      margin-bottom: 18px;
+    }
+
+    .signup-box p {
+
+      margin-bottom: 26px;
+    }
+
+    form {
+
+      display: flex;
+
+      flex-direction: column;
+
+      gap: 16px;
+
+      max-width: 480px;
+    }
+
+    input {
+
+      padding: 16px 18px;
+
+      border-radius: 16px;
+
+      border:
+      1px solid #d9cdc2;
+
+      background: rgba(255,255,255,0.75);
+
+      font-size: 15px;
+
+      outline: none;
+    }
+
+    button {
+
+      border: none;
+
+      cursor: pointer;
+
+      padding: 16px 24px;
+
+      border-radius: 999px;
+
+      background: #2f241e;
+
+      color: #fff;
+
+      font-size: 15px;
+
+      font-weight: 500;
+
+      transition: 0.25s ease;
+    }
+
+    button:hover {
+
+      background: #1d1511;
+    }
+
+    footer {
+
+      text-align: center;
+
+      margin-top: 120px;
+
+      padding-bottom: 40px;
+
+      color: #8f8177;
+
+      font-size: 14px;
+    }
+
+    @media(max-width: 980px) {
+
+      .hero {
 
         grid-template-columns: 1fr;
+
         gap: 50px;
       }
 
-      .left-section h1 {
+      h1 {
 
         font-size: 54px;
+      }
+
+      .workflow {
+
+        grid-template-columns: 1fr;
+      }
+
+      .section h2 {
+
+        font-size: 42px;
       }
 
     }
 
   </style>
+
 </head>
 
 <body>
 
   <div class="container">
 
-    <div class="left-section">
+    <section class="hero">
 
-      <h1>
-        Your Personal <br>
-        AI Expense Tracker
-      </h1>
+      <div class="hero-text">
+
+        <h1>
+          An Expense Tracker That Makes You More Conscious About Spending
+        </h1>
+
+        <p>
+          Most expense trackers become passive dashboards people stop opening.
+          This system works differently.
+          Every expense is manually logged through Telegram, creating a small
+          moment of awareness before money disappears unnoticed.
+        </p>
+
+        <div class="button-group">
+
+          <a
+            href="#signup"
+            class="btn primary-btn"
+          >
+            Join Early Access
+          </a>
+
+          <a
+            href="https://github.com/"
+            class="btn secondary-btn"
+          >
+            View GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <h3>
+          Financial Snapshot
+        </h3>
+
+        <div class="stat">
+
+          <div class="stat-label">
+            This Month's Spend
+          </div>
+
+          <div class="stat-value">
+            ₹18,450
+          </div>
+
+        </div>
+
+        <div class="stat">
+
+          <div class="stat-label">
+            Top Spending Category
+          </div>
+
+          <div class="stat-value">
+            Food & Dining
+          </div>
+
+        </div>
+
+        <div class="stat">
+
+          <div class="stat-label">
+            Savings Rate
+          </div>
+
+          <div class="stat-value">
+            32%
+          </div>
+
+        </div>
+
+        <div class="insight">
+
+          Logging every expense manually has reduced impulse spending
+          significantly over time. Awareness changes behaviour more than dashboards do.
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section">
+
+      <h2>
+        Why I Built This
+      </h2>
 
       <p>
-        A personal finance system built using Telegram, n8n, Supabase, and AI agents. 
-        Track spending effortlessly, understand your habits, and receive intelligent 
-        financial insights automatically.
+        I originally built this system for myself because I wanted complete control
+        over how I tracked money and understood my spending behaviour.
+        Over time, something unexpected happened.
+        The simple act of manually logging expenses through Telegram started changing
+        how I spent money in daily life.
+        I became more aware of emotional purchases, unnecessary spending,
+        and recurring habits that previously went unnoticed.
       </p>
 
-      <div class="button-group">
+    </section>
 
-        <a href="#" class="btn primary-btn">
-          Open Dashboard
-        </a>
+    <section class="section">
 
-        <a href="https://github.com/" class="btn secondary-btn">
-          View GitHub
-        </a>
+      <h2>
+        How The System Works
+      </h2>
 
-      </div>
+      <div class="workflow">
 
-    </div>
+        <div class="workflow-card">
 
-    <div class="dashboard-card">
+          <h4>
+            Telegram
+          </h4>
 
-      <div class="dashboard-header">
+          <p>
+            Expenses are logged instantly through chat.
+          </p>
 
-        <h3>May Overview</h3>
+        </div>
 
-        <div class="badge">
-          AI Insights Active
+        <div class="workflow-card">
+
+          <h4>
+            n8n Agent
+          </h4>
+
+          <p>
+            Automations process and enrich each transaction.
+          </p>
+
+        </div>
+
+        <div class="workflow-card">
+
+          <h4>
+            AI Categorisation
+          </h4>
+
+          <p>
+            AI understands merchants and spending intent automatically.
+          </p>
+
+        </div>
+
+        <div class="workflow-card">
+
+          <h4>
+            Supabase
+          </h4>
+
+          <p>
+            Financial data is stored and transformed into insights.
+          </p>
+
         </div>
 
       </div>
 
-      <div class="stat-card">
+    </section>
 
-        <div class="stat-label">
-          Total Spend
-        </div>
+    <section
+      class="section"
+      id="signup"
+    >
 
-        <div class="stat-value">
-          ₹18,450
-        </div>
+      <div class="signup-box">
+
+        <h3>
+          Join Early Access
+        </h3>
+
+        <p>
+          I'm currently building this in public and looking for early users
+          interested in mindful personal finance systems.
+        </p>
+
+        <form>
+
+          <input
+            type="text"
+            placeholder="Your name"
+          >
+
+          <input
+            type="email"
+            placeholder="Email address"
+          >
+
+          <input
+            type="text"
+            placeholder="What do you currently use to track expenses?"
+          >
+
+          <button>
+            Join Waitlist
+          </button>
+
+        </form>
 
       </div>
 
-      <div class="stat-card">
+    </section>
 
-        <div class="stat-label">
-          Top Spending Categories
-        </div>
+    <footer>
 
-        <div class="stat-value">
-          Food & Health
-        </div>
+      Built by Sushma using Telegram, n8n, Supabase & OpenAI
 
-      </div>
-
-      <div class="stat-card">
-
-        <div class="stat-label">
-          Savings Rate
-        </div>
-
-        <div class="stat-value">
-          32%
-        </div>
-
-      </div>
-
-      <div class="insight">
-
-        Your discretionary spending has reduced consistently over the last
-        three weeks. Most impulse purchases are now concentrated around weekends.
-
-      </div>
-
-    </div>
+    </footer>
 
   </div>
 
-  <footer>
-    Built by Sushma using n8n + Supabase + OpenAI
-  </footer>
-
 </body>
+
 </html>
