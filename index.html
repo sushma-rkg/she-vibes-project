@@ -10,7 +10,9 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>She Vibes • AI Expense Tracker</title>
+  <title>
+    She Vibes • Mindful Spending System
+  </title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -21,7 +23,7 @@
   >
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
 
@@ -33,30 +35,76 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
 
       font-family: 'Inter', sans-serif;
 
       background:
-      linear-gradient(
-        to bottom,
-        #f6f1eb,
-        #efe8df
-      );
+      #f4efe8;
 
-      color: #352b25;
+      color: #2d241f;
 
-      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
 
-      max-width: 1180px;
+      max-width: 1220px;
 
       margin: auto;
 
       padding:
-      80px 32px 60px;
+      48px 34px 80px;
+    }
+
+    nav {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      margin-bottom: 120px;
+    }
+
+    .logo {
+
+      font-size: 15px;
+
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      color: #5d5047;
+    }
+
+    .nav-button {
+
+      text-decoration: none;
+
+      color: #2d241f;
+
+      border:
+      1px solid #d9cec3;
+
+      padding:
+      12px 20px;
+
+      border-radius: 999px;
+
+      font-size: 14px;
+
+      transition: 0.2s ease;
+    }
+
+    .nav-button:hover {
+
+      background: rgba(255,255,255,0.6);
     }
 
     .hero {
@@ -70,42 +118,42 @@
 
       align-items: center;
 
-      min-height: 85vh;
+      min-height: 72vh;
     }
 
     h1 {
 
       font-family:
-      'Playfair Display',
+      'Instrument Serif',
       serif;
 
-      font-size: 74px;
+      font-size: 96px;
 
-      line-height: 1.05;
+      line-height: 0.95;
 
-      font-weight: 500;
+      font-weight: 400;
 
-      letter-spacing: -2px;
+      letter-spacing: -3px;
 
       margin-bottom: 28px;
 
-      color: #2d221c;
+      max-width: 700px;
     }
 
-    .hero-text p {
+    .hero-subtext {
+
+      max-width: 520px;
 
       font-size: 18px;
 
       line-height: 1.9;
 
-      color: #67584f;
+      color: #685b52;
 
-      margin-bottom: 34px;
-
-      max-width: 580px;
+      margin-bottom: 42px;
     }
 
-    .button-group {
+    .hero-buttons {
 
       display: flex;
 
@@ -114,27 +162,22 @@
       flex-wrap: wrap;
     }
 
-    .btn {
+    .primary-btn {
 
       text-decoration: none;
 
+      background: #2c241f;
+
+      color: #f7f3ee;
+
       padding:
-      15px 28px;
+      16px 28px;
 
       border-radius: 999px;
 
       font-size: 15px;
 
-      font-weight: 500;
-
       transition: 0.25s ease;
-    }
-
-    .primary-btn {
-
-      background: #2f241e;
-
-      color: #f8f4ef;
     }
 
     .primary-btn:hover {
@@ -142,131 +185,115 @@
       transform:
       translateY(-2px);
 
-      background: #1f1713;
+      background: #1f1915;
     }
 
     .secondary-btn {
 
-      border:
-      1px solid #cfc1b4;
+      text-decoration: none;
 
-      background:
-      rgba(255,255,255,0.45);
-
-      color: #4f4137;
-    }
-
-    .secondary-btn:hover {
-
-      background:
-      rgba(255,255,255,0.85);
-    }
-
-    .card {
-
-      background:
-      rgba(255,255,255,0.52);
+      color: #4f433c;
 
       border:
-      1px solid rgba(255,255,255,0.7);
+      1px solid #d7cbc0;
 
-      border-radius: 34px;
+      padding:
+      16px 26px;
 
-      padding: 36px;
+      border-radius: 999px;
 
-      backdrop-filter: blur(12px);
+      font-size: 15px;
+
+      background:
+      rgba(255,255,255,0.35);
+    }
+
+    .phone {
+
+      width: 100%;
+
+      max-width: 380px;
+
+      margin-left: auto;
+
+      background: #faf7f3;
+
+      border-radius: 42px;
+
+      padding: 24px;
+
+      border:
+      1px solid rgba(255,255,255,0.9);
 
       box-shadow:
-      0 20px 60px rgba(60,45,35,0.08);
+      0 30px 70px rgba(45,36,31,0.08);
     }
 
-    .card h3 {
+    .message {
 
-      font-family:
-      'Playfair Display',
-      serif;
+      padding: 16px 18px;
 
-      font-size: 30px;
+      border-radius: 22px;
 
-      font-weight: 500;
+      margin-bottom: 14px;
 
-      margin-bottom: 28px;
+      font-size: 15px;
 
-      color: #2d221c;
+      line-height: 1.7;
     }
 
-    .stat {
+    .user {
 
-      background:
-      rgba(255,255,255,0.65);
+      background: #ebe2d8;
+
+      margin-left: 50px;
+    }
+
+    .ai {
+
+      background: #f6f1eb;
 
       border:
-      1px solid rgba(224,214,204,0.9);
+      1px solid #e8ddd2;
 
-      border-radius: 24px;
-
-      padding: 22px;
-
-      margin-bottom: 18px;
+      margin-right: 50px;
     }
 
-    .stat-label {
+    .section {
+
+      margin-top: 180px;
+    }
+
+    .section-label {
 
       font-size: 13px;
 
       text-transform: uppercase;
 
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
 
-      color: #897a70;
+      color: #9a8c81;
 
-      margin-bottom: 10px;
+      margin-bottom: 18px;
     }
 
-    .stat-value {
-
-      font-size: 34px;
-
-      font-weight: 600;
-
-      color: #2f241e;
-    }
-
-    .insight {
-
-      margin-top: 28px;
-
-      background: #f2ebe4;
-
-      border-radius: 24px;
-
-      padding: 24px;
-
-      color: #5d4e43;
-
-      line-height: 1.9;
-
-      font-size: 15px;
-    }
-
-    .section {
-
-      margin-top: 140px;
-    }
-
-    .section h2 {
+    h2 {
 
       font-family:
-      'Playfair Display',
+      'Instrument Serif',
       serif;
 
-      font-size: 54px;
+      font-size: 68px;
 
-      font-weight: 500;
+      font-weight: 400;
 
-      margin-bottom: 28px;
+      line-height: 1;
 
-      color: #2d221c;
+      letter-spacing: -2px;
+
+      margin-bottom: 26px;
+
+      max-width: 760px;
     }
 
     .section p {
@@ -275,110 +302,136 @@
 
       font-size: 18px;
 
-      line-height: 1.95;
+      line-height: 2;
 
-      color: #65564d;
+      color: #675950;
     }
 
-    .workflow {
+    .insight-grid {
 
       display: grid;
 
       grid-template-columns:
-      repeat(4, 1fr);
+      repeat(3, 1fr);
 
-      gap: 22px;
+      gap: 24px;
 
-      margin-top: 48px;
+      margin-top: 54px;
     }
 
-    .workflow-card {
+    .insight-card {
+
+      padding: 34px;
+
+      border-radius: 30px;
 
       background:
-      rgba(255,255,255,0.5);
+      rgba(255,255,255,0.42);
 
       border:
-      1px solid rgba(223,212,201,0.9);
-
-      padding: 28px;
-
-      border-radius: 28px;
-
-      text-align: center;
+      1px solid rgba(221,212,202,0.9);
     }
 
-    .workflow-card h4 {
-
-      font-size: 18px;
-
-      margin-bottom: 12px;
-
-      color: #342923;
-    }
-
-    .workflow-card p {
+    .insight-card h3 {
 
       font-size: 15px;
 
-      line-height: 1.8;
-
-      color: #74655b;
-    }
-
-    .signup-box {
-
-      margin-top: 60px;
-
-      background:
-      rgba(255,255,255,0.55);
-
-      border-radius: 34px;
-
-      padding: 42px;
-
-      border:
-      1px solid rgba(223,212,201,0.9);
-    }
-
-    .signup-box h3 {
-
-      font-family:
-      'Playfair Display',
-      serif;
-
-      font-size: 38px;
-
       font-weight: 500;
+
+      color: #8d7f74;
 
       margin-bottom: 18px;
     }
 
-    .signup-box p {
+    .insight-card p {
 
-      margin-bottom: 26px;
+      font-size: 26px;
+
+      line-height: 1.5;
+
+      color: #2c241f;
+    }
+
+    .quote {
+
+      margin-top: 80px;
+
+      padding-left: 28px;
+
+      border-left:
+      2px solid #d6c8bc;
+    }
+
+    .quote p {
+
+      font-family:
+      'Instrument Serif',
+      serif;
+
+      font-size: 42px;
+
+      line-height: 1.4;
+
+      letter-spacing: -1px;
+
+      color: #342923;
+
+      max-width: 860px;
+    }
+
+    .waitlist {
+
+      margin-top: 180px;
+
+      padding:
+      70px 60px;
+
+      border-radius: 40px;
+
+      background:
+      rgba(255,255,255,0.4);
+
+      border:
+      1px solid rgba(223,214,204,0.8);
+    }
+
+    .waitlist h2 {
+
+      margin-bottom: 20px;
+    }
+
+    .waitlist p {
+
+      max-width: 650px;
+
+      margin-bottom: 36px;
     }
 
     form {
 
       display: flex;
 
-      flex-direction: column;
+      flex-wrap: wrap;
 
       gap: 16px;
-
-      max-width: 480px;
     }
 
     input {
 
-      padding: 16px 18px;
+      flex: 1;
 
-      border-radius: 16px;
+      min-width: 220px;
+
+      padding:
+      18px 20px;
+
+      border-radius: 18px;
 
       border:
-      1px solid #d9cdc2;
+      1px solid #ddd0c4;
 
-      background: rgba(255,255,255,0.75);
+      background:
+      rgba(255,255,255,0.7);
 
       font-size: 15px;
 
@@ -391,35 +444,25 @@
 
       cursor: pointer;
 
-      padding: 16px 24px;
+      padding:
+      18px 28px;
 
       border-radius: 999px;
 
-      background: #2f241e;
+      background: #2c241f;
 
-      color: #fff;
+      color: white;
 
       font-size: 15px;
-
-      font-weight: 500;
-
-      transition: 0.25s ease;
-    }
-
-    button:hover {
-
-      background: #1d1511;
     }
 
     footer {
 
       text-align: center;
 
-      margin-top: 120px;
+      margin-top: 100px;
 
-      padding-bottom: 40px;
-
-      color: #8f8177;
+      color: #96877c;
 
       font-size: 14px;
     }
@@ -430,22 +473,33 @@
 
         grid-template-columns: 1fr;
 
-        gap: 50px;
+        gap: 70px;
       }
 
       h1 {
 
-        font-size: 54px;
+        font-size: 68px;
       }
 
-      .workflow {
+      h2 {
+
+        font-size: 52px;
+      }
+
+      .insight-grid {
 
         grid-template-columns: 1fr;
       }
 
-      .section h2 {
+      .phone {
 
-        font-size: 42px;
+        margin: auto;
+      }
+
+      .waitlist {
+
+        padding:
+        50px 30px;
       }
 
     }
@@ -458,33 +512,48 @@
 
   <div class="container">
 
+    <nav>
+
+      <div class="logo">
+        SHE VIBES
+      </div>
+
+      <a
+        href="#waitlist"
+        class="nav-button"
+      >
+        Join Early Access
+      </a>
+
+    </nav>
+
     <section class="hero">
 
-      <div class="hero-text">
+      <div>
 
         <h1>
-          An Expense Tracker That Makes You More Conscious About Spending
+          Money feels different when you pay attention to it.
         </h1>
 
-        <p>
-          Most expense trackers become passive dashboards people stop opening.
-          This system works differently.
-          Every expense is manually logged through Telegram, creating a small
-          moment of awareness before money disappears unnoticed.
+        <p class="hero-subtext">
+
+          An AI-powered mindful spending system built around intentional expense logging.
+          Every transaction passes through a small moment of awareness before becoming data.
+
         </p>
 
-        <div class="button-group">
+        <div class="hero-buttons">
 
           <a
-            href="#signup"
-            class="btn primary-btn"
+            href="#waitlist"
+            class="primary-btn"
           >
             Join Early Access
           </a>
 
           <a
             href="https://github.com/"
-            class="btn secondary-btn"
+            class="secondary-btn"
           >
             View GitHub
           </a>
@@ -493,52 +562,41 @@
 
       </div>
 
-      <div class="card">
+      <div class="phone">
 
-        <h3>
-          Financial Snapshot
-        </h3>
+        <div class="message user">
+          Swiggy 428
+        </div>
 
-        <div class="stat">
+        <div class="message ai">
 
-          <div class="stat-label">
-            This Month's Spend
-          </div>
+          Categorised as:
+          <br><br>
 
-          <div class="stat-value">
-            ₹18,450
-          </div>
+          Food • Want • Late-night impulse purchase
 
         </div>
 
-        <div class="stat">
+        <div class="message user">
+          Uber 186
+        </div>
 
-          <div class="stat-label">
-            Top Spending Category
-          </div>
+        <div class="message ai">
 
-          <div class="stat-value">
-            Food & Dining
-          </div>
+          Transport • Need
 
         </div>
 
-        <div class="stat">
-
-          <div class="stat-label">
-            Savings Rate
-          </div>
-
-          <div class="stat-value">
-            32%
-          </div>
-
+        <div class="message user">
+          Zara 3490
         </div>
 
-        <div class="insight">
+        <div class="message ai">
 
-          Logging every expense manually has reduced impulse spending
-          significantly over time. Awareness changes behaviour more than dashboards do.
+          Shopping • Want
+          <br><br>
+
+          Shopping spend is 22% lower than last month.
 
         </div>
 
@@ -548,74 +606,75 @@
 
     <section class="section">
 
+      <div class="section-label">
+        THE INSIGHT
+      </div>
+
       <h2>
-        Why I Built This
+        Most expense trackers remove friction. This one uses it intentionally.
       </h2>
 
       <p>
-        I originally built this system for myself because I wanted complete control
-        over how I tracked money and understood my spending behaviour.
-        Over time, something unexpected happened.
-        The simple act of manually logging expenses through Telegram started changing
-        how I spent money in daily life.
-        I became more aware of emotional purchases, unnecessary spending,
-        and recurring habits that previously went unnoticed.
+
+        Logging expenses manually through Telegram creates a small pause before money disappears unnoticed.
+        Over time, that pause builds awareness around habits, emotional purchases, and behavioural patterns that most finance apps never surface.
+
       </p>
+
+      <div class="quote">
+
+        <p>
+          “The simple act of typing the amount I spent started changing how I spent money.”
+        </p>
+
+      </div>
 
     </section>
 
     <section class="section">
 
+      <div class="section-label">
+        HOW IT WORKS
+      </div>
+
       <h2>
-        How The System Works
+        Built as a personal financial operating system.
       </h2>
 
-      <div class="workflow">
+      <div class="insight-grid">
 
-        <div class="workflow-card">
+        <div class="insight-card">
 
-          <h4>
+          <h3>
             Telegram
-          </h4>
+          </h3>
 
           <p>
-            Expenses are logged instantly through chat.
+            Expenses are logged naturally through chat.
           </p>
 
         </div>
 
-        <div class="workflow-card">
+        <div class="insight-card">
 
-          <h4>
+          <h3>
             n8n Agent
-          </h4>
+          </h3>
 
           <p>
-            Automations process and enrich each transaction.
+            Workflows process, enrich, and organise transactions automatically.
           </p>
 
         </div>
 
-        <div class="workflow-card">
+        <div class="insight-card">
 
-          <h4>
-            AI Categorisation
-          </h4>
-
-          <p>
-            AI understands merchants and spending intent automatically.
-          </p>
-
-        </div>
-
-        <div class="workflow-card">
-
-          <h4>
-            Supabase
-          </h4>
+          <h3>
+            AI Insights
+          </h3>
 
           <p>
-            Financial data is stored and transformed into insights.
+            Spending behaviour becomes visible through patterns and reflection.
           </p>
 
         </div>
@@ -625,45 +684,42 @@
     </section>
 
     <section
-      class="section"
-      id="signup"
+      class="waitlist"
+      id="waitlist"
     >
 
-      <div class="signup-box">
-
-        <h3>
-          Join Early Access
-        </h3>
-
-        <p>
-          I'm currently building this in public and looking for early users
-          interested in mindful personal finance systems.
-        </p>
-
-        <form>
-
-          <input
-            type="text"
-            placeholder="Your name"
-          >
-
-          <input
-            type="email"
-            placeholder="Email address"
-          >
-
-          <input
-            type="text"
-            placeholder="What do you currently use to track expenses?"
-          >
-
-          <button>
-            Join Waitlist
-          </button>
-
-        </form>
-
+      <div class="section-label">
+        EARLY ACCESS
       </div>
+
+      <h2>
+        Looking for thoughtful early users.
+      </h2>
+
+      <p>
+
+        I’m currently building this in public and refining the system through real-world usage.
+        If mindful spending and intentional financial awareness resonate with you, join the waitlist.
+
+      </p>
+
+      <form>
+
+        <input
+          type="text"
+          placeholder="Your name"
+        >
+
+        <input
+          type="email"
+          placeholder="Email address"
+        >
+
+        <button>
+          Join Waitlist
+        </button>
+
+      </form>
 
     </section>
 
