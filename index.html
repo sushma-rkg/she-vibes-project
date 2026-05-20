@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Personal Expense Tracker</title>
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -13,19 +15,28 @@
     }
 
     body {
-      font-family: Inter, Arial, sans-serif;
-      background: #0f172a;
-      color: white;
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(
+        135deg,
+        #fff6f9,
+        #ffe8f1,
+        #fff0f5
+      );
+
+      color: #5c3a4a;
       min-height: 100vh;
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       padding: 40px;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1150px;
       width: 100%;
+
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
@@ -36,17 +47,18 @@
       font-size: 64px;
       line-height: 1.1;
       margin-bottom: 24px;
+      color: #7b4158;
     }
 
     .highlight {
-      color: #8b5cf6;
+      color: #e26d9f;
     }
 
     .left-section p {
-      font-size: 18px;
-      line-height: 1.7;
-      color: #cbd5e1;
-      margin-bottom: 32px;
+      font-size: 19px;
+      line-height: 1.8;
+      color: #7d5b69;
+      margin-bottom: 36px;
     }
 
     .button-group {
@@ -56,54 +68,65 @@
     }
 
     .btn {
-      padding: 14px 24px;
-      border-radius: 12px;
+      padding: 14px 26px;
+      border-radius: 16px;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.2s ease;
+      transition: 0.25s ease;
+      font-size: 15px;
     }
 
     .primary-btn {
-      background: #8b5cf6;
+      background: #e26d9f;
       color: white;
+      box-shadow: 0 8px 20px rgba(226,109,159,0.25);
     }
 
     .primary-btn:hover {
-      background: #7c3aed;
+      background: #d85a90;
+      transform: translateY(-2px);
     }
 
     .secondary-btn {
-      border: 1px solid #475569;
-      color: white;
+      background: white;
+      border: 1px solid #f2bfd2;
+      color: #b2557f;
     }
 
     .secondary-btn:hover {
-      background: #1e293b;
+      background: #fff3f7;
     }
 
     .card {
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 24px;
-      padding: 32px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      background: rgba(255,255,255,0.75);
+      backdrop-filter: blur(12px);
+
+      border-radius: 28px;
+      padding: 36px;
+
+      border: 1px solid #f4d3df;
+
+      box-shadow:
+        0 20px 40px rgba(226,109,159,0.12);
     }
 
     .card h3 {
-      margin-bottom: 24px;
-      font-size: 24px;
+      font-size: 28px;
+      margin-bottom: 28px;
+      color: #8c4964;
     }
 
     .stat {
-      background: #1e293b;
-      padding: 18px;
-      border-radius: 16px;
-      margin-bottom: 16px;
+      background: #fff8fb;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 18px;
+      border: 1px solid #f7d9e5;
     }
 
     .stat-title {
       font-size: 14px;
-      color: #94a3b8;
+      color: #9b7283;
       margin-bottom: 8px;
     }
 
@@ -112,35 +135,40 @@
       font-weight: bold;
     }
 
-    .green {
-      color: #22c55e;
+    .pink {
+      color: #de5d8f;
     }
 
-    .purple {
-      color: #8b5cf6;
+    .rose {
+      color: #c76a8a;
     }
 
-    .orange {
-      color: #f59e0b;
+    .peach {
+      color: #d88972;
     }
 
     footer {
       position: absolute;
       bottom: 20px;
-      color: #64748b;
+
       font-size: 14px;
+      color: #9b7283;
     }
 
     @media (max-width: 900px) {
+
       .container {
         grid-template-columns: 1fr;
       }
 
       .left-section h1 {
-        font-size: 48px;
+        font-size: 46px;
       }
+
     }
+
   </style>
+
 </head>
 
 <body>
@@ -148,42 +176,66 @@
   <div class="container">
 
     <div class="left-section">
+
       <h1>
-        Your Personal <br />
-        <span class="highlight">AI Expense Tracker</span>
+        Your Personal <br>
+        <span class="highlight">
+          AI Expense Tracker
+        </span>
       </h1>
 
       <p>
-        Built using Telegram, n8n, Supabase, and AI agents.
-        Track expenses instantly, understand spending patterns,
-        and generate automated financial insights in real time.
+        A personal finance system built
+        using Telegram, n8n, Supabase, and AI agents.
+        Track spending effortlessly, understand your habits,
+        and receive intelligent financial insights automatically.
       </p>
 
       <div class="button-group">
-        <a href="#" class="btn primary-btn">View Dashboard</a>
-        <a href="https://github.com/" class="btn secondary-btn">
-          GitHub Repo
+
+        <a href="#" class="btn primary-btn">
+          Open Dashboard
         </a>
+
+        <a href="https://github.com/" class="btn secondary-btn">
+          View GitHub
+        </a>
+
       </div>
+
     </div>
 
     <div class="card">
-      <h3>Live Financial Snapshot</h3>
+
+      <h3>Financial Snapshot</h3>
 
       <div class="stat">
-        <div class="stat-title">This Month's Spend</div>
-        <div class="stat-value green">₹18,450</div>
+        <div class="stat-title">
+          This Month's Spend
+        </div>
+
+        <div class="stat-value pink">
+          ₹18,450
+        </div>
       </div>
 
       <div class="stat">
-        <div class="stat-title">Top Category</div>
-        <div class="stat-value purple">Food & Dining</div>
+        <div class="stat-title">
+          Highest Expense Category
+        </div>
+
+        <div class="stat-value rose">
+          Food & Dining
+        </div>
       </div>
 
       <div class="stat">
-        <div class="stat-title">AI Insight</div>
-        <div class="stat-value orange">
-          Shopping spend down 22%
+        <div class="stat-title">
+          AI Insight
+        </div>
+
+        <div class="stat-value peach">
+          Shopping spend reduced by 22%
         </div>
       </div>
 
