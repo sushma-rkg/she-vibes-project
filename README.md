@@ -346,3 +346,9 @@ It is the attempt to build a financial system that feels:
 The goal was not to optimize budgeting aggressively.
 
 The goal was to reduce friction enough that financial awareness becomes effortless.
+
+---
+
+# Architecture diagram
+
+![Architecture Diagram](expense_tracker_architecture.svg)
