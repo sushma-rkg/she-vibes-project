@@ -334,6 +334,46 @@ Examples:
 
 ---
 
+# Input Validation and Error Handling
+
+The system includes basic input validation at the parsing stage to ensure transaction data remains structured and reliable.
+
+The parser currently expects transactions in the following format:
+
+```text
+[Amount] [Merchant]
+```
+
+Examples:
+
+```text
+120 Swiggy
+450 Uber - airport drop
+1200 Zara - jeans
+```
+
+If the input format is incorrect, the transaction is rejected before entering the categorization and database pipeline.
+
+Example invalid input:
+
+```text
+Swiggy 120
+```
+
+Instead of silently failing or attempting aggressive inference, the workflow sends a Telegram error message back to the user explaining the correct format.
+
+This validation layer was intentionally designed to prioritize:
+
+* deterministic parsing,
+* predictable ingestion,
+* and data integrity.
+
+The system currently avoids automatic correction of malformed financial inputs because incorrect assumptions during ingestion can silently corrupt downstream reporting and analytics.
+
+
+---
+
+
 # Philosophy
 
 The most interesting part of this project is not the AI.
